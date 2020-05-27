@@ -6,11 +6,24 @@ class EasyABC extends Component{
 		super(props);
 		this.state={
 			alphabets:alphabets,
-			currentPosition:0
+			currentPosition:0,
+			currentTick:0
 		};
+		this.next=this.next.bind(this);
+	}
+	next(){
+		console.log('Next button is clicked');
+		if(this.state.currentTick<2)
+		{
+			this.setState({currentTick:this.state.currentTick+1});
+		}
+		else
+		{
+		this.setState({currentPosition:this.state.currentPosition+1,currentTick:0});
+		}
 	}
 	render(){
-			console.log(alphabets);
+			
 		return(
 
 			<div className="game">
@@ -21,7 +34,7 @@ class EasyABC extends Component{
 					<div className="buttons">
 						<a  className="button prev">Previous</a>
 						<a  className="button sound">Play Sound Again</a>
-						<a  className="button next">Next</a>
+						<a onClick={this.next} className="button next">Next</a>
 					</div>
 					<div className="fields">
 						<div className="field-block">
