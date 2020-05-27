@@ -1,5 +1,5 @@
 ## Learn ABC
-This is a simple interactive game for toddlers which can be used to teach English alphabets. 
+This is a simple interactive game for toddlers which can be used to teach English alphabets. <br/>
 Heroku App link:https://protected-wildwood-77393.herokuapp.com/
 
 ## Tech/framework used
